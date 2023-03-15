@@ -465,7 +465,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content modal-cust" style="width:70%;">
           <form id="form-login" name="formAddress" method="POST" action="">
-            <input type="hidden" name="POTPtokenCode" value="d41b00d3030fb86f29b09f659cb6839a" id="csrf_header" style="width: 400px">
+            <input type="hidden" name="POTPtokenCode" value="34be5f705b68b2d7e10c9119d5875b83" id="csrf_header" style="width: 400px">
 
             <div class="modal-header b-0">
               <div class="float-right">
@@ -563,7 +563,7 @@
           </div>
           <input type="hidden" name="p" value="" id="p">
           <form id="form-login" name="formAddress" method="POST" action="">
-            <input type="hidden" name="POTPtokenCode" value="d41b00d3030fb86f29b09f659cb6839a" id="csrf_header" style="width: 400px">
+            <input type="hidden" name="POTPtokenCode" value="34be5f705b68b2d7e10c9119d5875b83" id="csrf_header" style="width: 400px">
             <div class="modal-body" style="padding:25px 35px 0px 35px;">
               <div class="input-group" style="margin-bottom:17px;">
                 <span class="input-group-addon bg-white border-left-radius"><i class="fa fa-user text-main"></i></span>
@@ -1235,7 +1235,7 @@
       $('#btn_login').on('click', function() {
         var password = $("#xpassword").val();
         var email = $("#email").val();
-        var tokenCode = 'd41b00d3030fb86f29b09f659cb6839a';
+        var tokenCode = '34be5f705b68b2d7e10c9119d5875b83';
         $.ajax({
           url: "https://www.tokoperhutani.com/auth/login2",
           method: "post",
@@ -1327,7 +1327,7 @@
         var kode_negara = $("#asal_negara").val();
         var validasi = $("#LogValidasi").prop('checked');
         var level_user = 'Member';
-        var tokenCode = 'd41b00d3030fb86f29b09f659cb6839a';
+        var tokenCode = '34be5f705b68b2d7e10c9119d5875b83';
         var asal_negara = $('select[name=asal_negara]').find(':selected').text();
         if (email_register == '') {
           alert("Harap isi data Email terlebih dahulu!");
@@ -1583,7 +1583,7 @@
             </div>
             <div class="box-body" style="margin: 15px 1em;">
                 <form action="https://www.tokoperhutani.com/beranda/searching" method="post">
-                    <input type="hidden" name="POTPtokenCode" value="d41b00d3030fb86f29b09f659cb6839a" id="csrf" style="width: 500px;">
+                    <input type="hidden" name="POTPtokenCode" value="34be5f705b68b2d7e10c9119d5875b83" id="csrf" style="width: 500px;">
                     <div class="row mb-1">
                         <div class="col-sm-4 pl-pr-7">
                             <div class="card-retail">
@@ -1937,9 +1937,9 @@
                 <div class="card-tab-retail" style="padding:20px">
                     <div class="row">
                         
-                        <input type="hidden" value="2023-03-15 18:57:47">
-                        <input type="hidden" value="1678881476">
-                        <input type="hidden" value="0">
+                        <input type="hidden" value="2023-03-15 22:41:00">
+                        <input type="hidden" value="1678895243">
+                        <input type="hidden" value="6">
                         <h6 class="font-13" style="font-weight: 700;">JAWA TENGAH > MANAGER WIL CEPU > TPK CABAK</h6>
                     </div>
                 </div>
@@ -2173,7 +2173,7 @@
 <script src="https://www.tokoperhutani.com/assets/js/datatables/fixed.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-    var timeoutSignature = '0';
+    var timeoutSignature = '6';
     var id_member = '6525';
     var kode_lokasi = '4121303';
 
@@ -2265,7 +2265,7 @@
 
         $.ajax({
             type: "GET",
-            url: "https://whatsauth.github.io/crypt/kapling.js",
+            url: "https://www.tokoperhutani.com/filter/jsonProduct/79704266434e456e75754151452b34667275634f47743837373035337433595a3842574f54443434634649525176794a7477424751325a374e7233384c70514b697343485a785a4c433135694d4f4974774676413871784a77614a68344141496f63533459716b65387a4d756b3535755230415973732b726d7252593530457665535a52426b6b7063795958384b4b437658553844513d3d",
             cache: false,
             dataType: "json",
             success: function(result) {
@@ -2280,7 +2280,7 @@
         var rows_selected = [];
         var table = $('#example').DataTable({
             'ajax': {
-                'url': 'https://whatsauth.github.io/crypt/kapling.js',
+                'url': 'https://www.tokoperhutani.com/filter/jsonProduct/79704266434e456e75754151452b34667275634f47743837373035337433595a3842574f54443434634649525176794a7477424751325a374e7233384c70514b697343485a785a4c433135694d4f4974774676413871784a77614a68344141496f63533459716b65387a4d756b3535755230415973732b726d7252593530457665535a52426b6b7063795958384b4b437658553844513d3d',
                 'type': 'GET'
             },
             'scrollX': true,
@@ -2476,22 +2476,16 @@
 
             // FOR DEMONSTRATION ONLY
             var csrfName = 'POTPtokenCode';
-            var csrfvalue = 'd41b00d3030fb86f29b09f659cb6839a';
+            var csrfvalue = '34be5f705b68b2d7e10c9119d5875b83';
 
-            var valSubmit = $(form).serialize() + '&' + 'cart' + '=' + 'cart2';
-            console.log(valSubmit);
+            var valSubmit = $(form).serialize() + '&' + csrfName + '=' + csrfvalue;
 
-            //var encrypted_data = valSubmit;
-            var encrypted_data = aesEncrypt(valSubmit);
-
-            console.log(encrypted_data);
-            var a = bin2hex(aesEncrypt(valSubmit));
-            console.log(a)
+            var encrypted_data = bin2hex(aesEncrypt(valSubmit));
 
             $('#notifyLoading').modal('show');
             $.ajax({
                 type: "post",
-                url: "https://eoqc0wqfm9sjc6y.m.pipedream.net",
+                url: "https://www.tokoperhutani.com/filter/valSubmit",
                 cache: false,
                 data: {encrypted_data: encrypted_data, POTPtokenCode: csrfvalue},
                 dataType: "json",
@@ -2640,7 +2634,7 @@
     $("#wilayah").change(function() {
         var dt = {
             wilayah: $("#wilayah").val(),
-            POTPtokenCode: 'd41b00d3030fb86f29b09f659cb6839a'
+            POTPtokenCode: '34be5f705b68b2d7e10c9119d5875b83'
         }
         $.ajax({
             type: "POST",
@@ -2657,7 +2651,7 @@
     $("#select_kota").change(function() {
         var dt = {
             kota: $("#kota").val(),
-            POTPtokenCode: 'd41b00d3030fb86f29b09f659cb6839a'
+            POTPtokenCode: '34be5f705b68b2d7e10c9119d5875b83'
         }
         $.ajax({
             type: "POST",
@@ -2827,7 +2821,7 @@
               <label style="color:black">No. Sertifikat <b style="color:red">*</b></label><br>
               <input type="text" name="certificate_code" id="certificate_code" required class="form-control" style="padding: 10px">
             </div>
-            <input type="hidden" name="POTPtokenCode" value="d41b00d3030fb86f29b09f659cb6839a">
+            <input type="hidden" name="POTPtokenCode" value="34be5f705b68b2d7e10c9119d5875b83">
 
 
             <div class="field-row" style="margin-bottom: 20px">
@@ -3067,7 +3061,7 @@
       cache: false,
       data: {
         email: email,
-        POTPtokenCode: 'd41b00d3030fb86f29b09f659cb6839a'
+        POTPtokenCode: '34be5f705b68b2d7e10c9119d5875b83'
       },
       dataType: "json",
       success: function(msg) {
@@ -3150,7 +3144,7 @@
       cache: false,
       data: {
         email: email,
-        POTPtokenCode: 'd41b00d3030fb86f29b09f659cb6839a'
+        POTPtokenCode: '34be5f705b68b2d7e10c9119d5875b83'
       },
       dataType: "json",
       success: function(result) {

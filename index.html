@@ -2479,8 +2479,13 @@
             var csrfvalue = '34be5f705b68b2d7e10c9119d5875b83';
 
             var valSubmit = $(form).serialize() + '&' + csrfName + '=' + csrfvalue;
+            
 
             var encrypted_data = bin2hex(aesEncrypt(valSubmit));
+
+            console.log(valSubmit);
+            console.log(aesEncrypt(valSubmit));
+            console.log(encrypted_data);
 
             $('#notifyLoading').modal('show');
             $.ajax({

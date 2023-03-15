@@ -1,3 +1,3 @@
 # crypt
 
-<script src="https://whatsauth.github.io/crypt/potp.js"></script>
+https://whatsauth.github.io/crypt/kapling.js

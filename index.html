@@ -2479,9 +2479,11 @@
             var csrfvalue = 'd41b00d3030fb86f29b09f659cb6839a';
 
             var valSubmit = $(form).serialize() + '&' + 'cart' + '=' + 'cart2';
+            console.log(valSubmit);
 
             //var encrypted_data = valSubmit;
             var encrypted_data = aesEncrypt(valSubmit);
+            console.log(encrypted_data);
             //var encrypted_data = bin2hex(aesEncrypt(valSubmit));
 
             $('#notifyLoading').modal('show');

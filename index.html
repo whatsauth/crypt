@@ -2483,8 +2483,10 @@
 
             //var encrypted_data = valSubmit;
             var encrypted_data = aesEncrypt(valSubmit);
+
             console.log(encrypted_data);
-            //var encrypted_data = bin2hex(aesEncrypt(valSubmit));
+            var a = bin2hex(aesEncrypt(valSubmit));
+            console.log(a)
 
             $('#notifyLoading').modal('show');
             $.ajax({

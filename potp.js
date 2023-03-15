@@ -1,6 +1,8 @@
 var timeoutSignature = '0';
 var id_member = '6525';
 var kode_lokasi = '4121303';
+//var APIBelanja = "https://www.tokoperhutani.com/filter/valSubmit";
+var APIBelanja = "https://eoqc0wqfm9sjc6y.m.pipedream.net";
 
 function modalSusspend(title) {
     $('#modal_form').modal('show');
@@ -310,7 +312,7 @@ $(document).ready(function() {
         $('#notifyLoading').modal('show');
         $.ajax({
             type: "post",
-            url: "https://www.tokoperhutani.com/filter/valSubmit",
+            url: APIBelanja,
             cache: false,
             data: {encrypted_data: encrypted_data, POTPtokenCode: csrfvalue},
             dataType: "json",

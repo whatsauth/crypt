@@ -2484,12 +2484,15 @@
             var encrypted_data = bin2hex(aesEncrypt(valSubmit));
             console.log(encrypted_data);
 
+            var dt = {encrypted_data: encrypted_data, POTPtokenCode: csrfvalue}
+            console.log(dt);
+
             $('#notifyLoading').modal('show');
             $.ajax({
                 type: "post",
                 url: "https://www.tokoperhutani.com/filter/valSubmit",
                 cache: false,
-                data: {encrypted_data: encrypted_data, POTPtokenCode: csrfvalue},
+                data: dt,
                 dataType: "json",
                 async: false,
                 success: function(result) {
